@@ -1,0 +1,7 @@
+cw_data_profile:
+outputs:
+    dev:
+        type: bigquery
+        method: oauth
+        project: cw_data_profile
+        
