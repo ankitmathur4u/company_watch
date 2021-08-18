@@ -9,16 +9,14 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
+with stage_data as (
 
-    select 1 as id
-    union all
-    select null as id
+    SELECT * FROM `winter-berm-323206.company_watch.stage_data`
 
 )
 
 select *
-from source_data
+from stage_data
 
 /*
     Uncomment the line below to remove records with null `id` values
