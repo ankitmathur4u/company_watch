@@ -3,19 +3,21 @@ version: 2
 
 models:
     - name: customer_data
-      description: "A starter dbt model"
+      description: "raw customer data"
       columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: customer_id
+            description: "customer identification number"
             tests:
-                - unique
                 - not_null
 
     - name: analytics
-      description: "A starter dbt model"
+      description: "analytical data"
       columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: customer_id
+            description: "customer identification number"
             tests:
-                - unique
+                - not_null
+          - name: first_name
+            description: "customer first name"
+            tests:
                 - not_null
